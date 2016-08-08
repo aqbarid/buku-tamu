@@ -31,7 +31,9 @@ function edit_form(){
                     echo 'data gagal di update';
                 }
             }
-            echo '<form method="post" action="' . esc_url( $_SERVER['REQUEST_URI'] ) . '">
+            echo '
+            <div class="wrap">
+            <form method="post" action="' . esc_url( $_SERVER['REQUEST_URI'] ) . '">
         	Name :<br>
         	<input value="'.$data->id.'" type="hidden" name="cf-id">
         	<input value="'.$data->name.'" type="text" name="cf-name"><br>
@@ -41,7 +43,7 @@ function edit_form(){
         	<textarea name="cf-message" cols="30" rows="10">'.$data->message.'</textarea>
         	<br>
         	<button type="submit" class="button button-primary" name="update" >Submit</button>
-        	</form>
+        	</form></div>
         	';
         }
     }
